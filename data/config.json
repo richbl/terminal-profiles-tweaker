@@ -1,0 +1,30 @@
+{
+  "details": {
+    "title": "Gnome Terminal Profiles Tweaker (GTPT)",
+    "syntax": "gnome_terminal_profiles_tweaker.sh [-c new_column_count] [-r new_row_count] [-f new_font]",
+    "version": "1.0.0"
+  },
+  "arguments": [
+    {
+      "short_form": "-c",
+      "long_form": "--columns",
+      "text_string": "columns",
+      "description": "The number of columns in a newly created terminal window",
+      "required": false
+    },
+    {
+      "short_form": "-r",
+      "long_form": "--rows",
+      "text_string": "rows",
+      "description": "The number of rows in a newly created terminal window",
+      "required": false
+    },
+    {
+      "short_form": "-f",
+      "long_form": "--font",
+      "text_string": "font",
+      "description": "Font name and size using Pango syntax: 'name size', e.g. 'Monospace 12'",
+      "required": false
+    }
+  ]
+}
