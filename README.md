@@ -18,7 +18,7 @@ So, the use case for **GTPT** is whenever I discover a new font (or terminal hei
 
 **GTPT** uses a Bash shell template (BaT) called **[A-Bash-Template](https://github.com/richbl/a-bash-template)** designed to make script development and command line argument management more robust, easier to implement, and easier to maintain. Here are a few of those features:
 
-- Dependencies checker: a routine that checks all external program dependencies (*e.g.*, [sshpass](http://linux.die.net/man/1/sshpass) and [jq](https://stedolan.github.io/jq/))
+- Dependencies checker: a routine that checks all external program dependencies (*e.g.*, [jq](https://stedolan.github.io/jq/))
 - Arguments and script details--such as script description and syntax--are stored in the [JSON](http://www.json.org/) file format (*i.e.*, `config.json`)
 - JSON queries (using [jq](https://stedolan.github.io/jq/)) handled through wrapper functions
 - A script banner function automates banner generation, reading directly from `config.json`
