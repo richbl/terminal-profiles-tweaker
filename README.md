@@ -22,9 +22,9 @@ So, the use case for **GTPT** is whenever I discover a new font (or terminal hei
 - Arguments and script details--such as script description and syntax--are stored in the [JSON](http://www.json.org/) file format (*i.e.*, `config.json`)
 - JSON queries (using [jq](https://stedolan.github.io/jq/)) handled through wrapper functions
 - A script banner function automates banner generation, reading directly from `config.json`
-- Command line arguments are parsed and tested for completeness using both short and long-format argument syntax (*e.g.*, `-u|--username`)
+- Command line arguments are parsed and tested for completeness using both short and long-format argument syntax (*e.g.*, `-f|--font`)
 - Optional command line arguments are permissible and managed through the JSON configuration file
-- Template functions organized into libraries to minimize code footprint in the main script
+- Template functions organized into libraries (see the [Bash-Lib](https://github.com/richbl/bash-lib) project for details) to minimize code footprint in the main script
 
 For more details about using a bash template, [check out the BaT sources here](https://github.com/richbl/a-bash-template).
 
@@ -91,4 +91,4 @@ When the optional arguments are passed, the script provides feedback on the chan
 
 ### Roadmap
 
-The gsettings profile getter/setter functions in this script could be used for the custom configuration of any number (all?) Gnome Terminal properties. If there's a good use case for adding additional functionality to GTPT, let me know.
+The gsettings profile getter/setter functions in this script could be used for the bulk configuration of any number Gnome Terminal properties. If there's a good use case for adding additional functionality to GTPT, let me know.
