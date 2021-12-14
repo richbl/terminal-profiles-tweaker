@@ -89,6 +89,14 @@ When the optional arguments are passed, the script provides feedback on the chan
     Profile #3 'ibm3270' >> Font: 'Source Code Pro 11'-->'IBM 3270 13'.
     ...
 
-### Roadmap
+## Roadmap
 
-The gsettings profile getter/setter functions in this script could be used for the bulk configuration of any number Gnome Terminal properties. If there's a good use case for adding additional functionality to GTPT, let me know.
+- The gsettings profile getter/setter functions in this script could be used for the bulk configuration of any number Gnome Terminal properties. If there's a good use case for adding additional functionality to **GTPT**, let me know.
+
+## IMPORTANT! This Project Uses Git Submodules
+
+> If you're about to clone this project, read this
+
+This project uses a Git [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) project, called [Bash-Lib](https://github.com/richbl/bash-lib) (see the `bash-lib` folder for details) to keep library dependencies single-sourced and up-to-date without manual intervention.
+
+So, be sure to clone this project with the `--recursive` switch (`git clone --recursive https://github.com/richbl/a-bash-template`) so any submodule project(s) will be automatically cloned as well. If you clone into this project without this switch, you'll likely see empty submodule project folders (depending on your version of Git).
