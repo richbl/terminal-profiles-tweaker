@@ -11,7 +11,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 #
 # This program is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE.  See the GNU General Public License at 
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License at
 # <http://www.gnu.org/licenses/> for more details.
 #
 # -----------------------------------------------------------------------------
@@ -25,7 +25,8 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # inputs:
 #   -c, --columns  The number of columns in a newly created terminal window
 #   -r, --rows     The number of rows in a newly created terminal window
-#   -f, --font     Font name and size using Pango syntax: 'name size', e.g. 'Monospace 12'
+#   -f, --font     Font name and size using Pango syntax: 'name size',
+#                  e.g. 'Monospace 12'
 #
 # outputs:
 #  --notification of script success/failure
@@ -39,15 +40,15 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 #
 # FOR MORE INFORMATION:
 #   This script was written using the BaT template. To learn more, refer to
-#   the A-Bash-Template project (https://github.com/richbl/a-bash-template) 
+#   the A-Bash-Template project (https://github.com/richbl/a-bash-template)
 #
 
 # -----------------------------------------------------------------------------
 # script library sources and declarations
 #
-. "$(cd "$(dirname "$0")" && pwd)/bash-lib/args"
-. "$(cd "$(dirname "$0")" && pwd)/bash-lib/general"
-
+EXEC_DIR="$(dirname "$(readlink -f "$0")")"
+source "${EXEC_DIR}/bash-lib/general"
+source "${EXEC_DIR}/bash-lib/args"
 
 # [user-config] set any external program dependencies here
 declare -a REQ_PROGRAMS=('jq' 'gsettings')
@@ -69,14 +70,14 @@ check_for_args_completeness
 # -----------------------------------------------------------------------------
 # get terminal profile value from profile UUID and key passed in
 #
-function get_profile_key {
+function get_profile_key() {
   gsettings get org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$1"/ "$2"
 }
 
 # -----------------------------------------------------------------------------
 # set terminal profile value from profile UUID, key, and value passed in
 #
-function set_profile_key {
+function set_profile_key() {
   gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$1"/ "$2" "$3"
 }
 
@@ -98,7 +99,7 @@ readonly ARG_ROWS
 readonly ARG_FONT
 
 # get list of profile identifiers
-IFS=", " read -r -a profiles <<< "$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "\'[]")?"
+IFS=", " read -r -a profiles <<<"$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d "\'[]")?"
 profile_count=${#profiles[@]}
 
 # check if no profile identifiers found
@@ -109,8 +110,8 @@ fi
 
 printf "%s\n\n" "$profile_count profiles found"
 
-# loop through list of profiles and update elements 
-for ((i=0;i<profile_count;i++)); do
+# loop through list of profiles and update elements
+for ((i = 0; i < profile_count; i++)); do
 
   summary=""
 
@@ -148,7 +149,7 @@ for ((i=0;i<profile_count;i++)); do
   fi
 
   if [ -z "${summary}" ]; then
-    summary="Profile #$((i + 1 )) $profile_name >> no changes"
+    summary="Profile #$((i + 1)) $profile_name >> no changes"
   else
     summary="Profile #$((i + 1)) $profile_name >> $summary"
   fi

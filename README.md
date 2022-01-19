@@ -46,7 +46,7 @@ Here's the default response when running `gnome_terminal_profiles_tweaker.sh` wi
 
      |
      |  Gnome Terminal Profiles Tweaker (GTPT)
-     |    1.0.0
+     |    1.0.1
      |
      |  Usage:
      |    gnome_terminal_profiles_tweaker.sh [-c new_column_count] [-r new_row_count] [-f new_font]
@@ -71,7 +71,7 @@ When the optional arguments are passed, the script provides feedback on the chan
 
      |
      |  Gnome Terminal Profiles Tweaker (GTPT)
-     |    1.0.0
+     |    1.0.1
      |
      |  Usage:
      |    gnome_terminal_profiles_tweaker.sh [-c new_column_count] [-r new_row_count] [-f new_font]
