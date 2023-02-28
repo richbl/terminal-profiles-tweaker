@@ -6,7 +6,7 @@ View and bulk edit the following [Gnome Terminal](https://en.wikipedia.org/wiki/
 - Row size (terminal height)
 - Column size (terminal width)
 
-<picture>![image](https://user-images.githubusercontent.com/10182110/145905455-5f94f57d-992d-4dab-a4e4-006a012ddbbc.png)</picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/10182110/145905455-5f94f57d-992d-4dab-a4e4-006a012ddbbc.png"><source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/10182110/145905455-5f94f57d-992d-4dab-a4e4-006a012ddbbc.png"><img src="https://user-images.githubusercontent.com/10182110/145905455-5f94f57d-992d-4dab-a4e4-006a012ddbbc.png"></picture>
 
 ## Rationale
 
@@ -92,8 +92,8 @@ When the optional arguments are passed, the script provides feedback on the chan
 
 - The gsettings profile getter/setter functions in this script could be used for the bulk configuration of any number Gnome Terminal properties. If there's a good use case for adding additional functionality to **GTPT**, let me know.
 
-## IMPORTANT: This Project Uses Git Submodules  <picture><img src="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150" /></picture>
+## IMPORTANT: This Project Uses Git Submodules <picture><source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"><source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"><img src="https://user-images.githubusercontent.com/10182110/208980142-08d4cf6e-20ac-4243-ac69-e056258b0315.png" width="150"></picture>
 
-This project uses a Git [submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) project, specifically the `bash-lib` folder to keep this project up-to-date without manual intervention.
+This project uses [Git submodule project(s)](https://git-scm.com/book/en/v2/Git-Tools-Submodules) (located in the `bash-lib` folder) to keep this project up-to-date without manual intervention.
 
-So, be sure to clone this project with the `--recursive` switch (`git clone --recursive https://github.com/richbl/this_project`) so any submodule project(s) will be automatically cloned as well. If you clone into this project without this switch, you'll likely see empty submodule project folders (depending on your version of Git).
+**Be sure to clone this project with the `--recursive` switch** (`git clone --recursive https://github.com/richbl/this_project`) so any submodule project(s) will be automatically cloned as well. If you clone into this project without this switch, you'll likely see empty submodule project folders (depending on your version of Git).
